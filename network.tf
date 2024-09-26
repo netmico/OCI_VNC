@@ -1,9 +1,9 @@
 resource "oci_core_vcn" "OCI_NET" {
-    cidr_block = "10.92.0.0/16"
-compartment_id = var.compartment_id
-display_name = "OCI_VNC"
-  
+  cidr_block     = "10.92.0.0/16"
+  compartment_id = var.compartment_id
+  display_name   = "OCI_VCN"
 }
+
 
 
 resource "oci_core_subnet" "public" {
@@ -59,9 +59,7 @@ resource "oci_core_instance" "vnc_instance" {
     source_id = var.image_id
   }
 
-  metadata = {
-    ssh_authorized_keys = file("~/.ssh/id_rsa.pub")
-  }
+
 
   create_vnic_details {
     assign_public_ip = true
