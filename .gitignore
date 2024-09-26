@@ -5,6 +5,7 @@
 .terraform/
 .terraform.tfstate
 .terraform.tfstate.backup
+.terraform.tfvars
 crash.log
 
 # Local environment files
