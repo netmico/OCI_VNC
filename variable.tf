@@ -1,26 +1,42 @@
+
+variable "oci_user" {}
+variable "oci_fingerprint" {}
+variable "oci_tenancy" {}
+variable "oci_region" {}
+variable "oci_key_file" {}
+
+
+
+
+
+
+
+
+
+
 variable "region" {
   description = "The OCI region to use."
   type        = string
 }
 variable "compartment_id" {
-    description = "this comparment"
-    type        = string
-  
+  description = "this comparment"
+  type        = string
+
 }
 
 variable "vnc_id" {
-    type        = string
+  type = string
 
 
 }
 
 variable "availability_domain" {
-    type        = string
-  
+  type = string
+
 }
 variable "image_id" {
-    type        = string
-  
+  type = string
+
 }
 
 variable "tenancy_ocid" {
